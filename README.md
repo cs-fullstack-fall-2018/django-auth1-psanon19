@@ -6,3 +6,10 @@ The pre-created user and the blog entries are created in the localhost/admin pag
 
 Extra work:
 Create a new page that will show all blog entries and create a link to the new page on all existing pages.
+
+
+Accounts
+User: Usa / Password: test12345
+User: Japan / Password: test12345
+User: England / Password: test12345
+SuperUser: admin / Password: test12345
