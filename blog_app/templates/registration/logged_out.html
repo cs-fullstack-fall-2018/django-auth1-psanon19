@@ -1,0 +1,29 @@
+{# Testing here #}
+{% load static %}
+<link rel="stylesheet" href="{% static 'blog_app/bootstrap.css' %}">
+<div class="container">
+    <div class="jumbotron">
+        <p>This is the forms app</p>
+        {% if user.is_authenticated %}
+        User: {{ user.get_username }}
+        {% else %}
+        Not Logged IN
+        {% endif %}
+        <div class="logout" align="right">
+            <a href="http://127.0.0.1:8000/accounts/login/" class="btn btn-link">Login</a>
+            <a href="http://127.0.0.1:8000/accounts/logout/" class="btn btn-link">Logout</a>
+        </div>
+    </div>
+    {% if form_list %}
+
+    <ul>
+        {% for eachItem in form_list %}
+        <li>{{ eachItem.blog_title }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h1 align="center">Hey buddy, you should Log In!</h1>
+    {% endif %}
+</div>
+<script src="{% static 'blog_app/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'blog_app/bootstrap.js' %}"></script>
